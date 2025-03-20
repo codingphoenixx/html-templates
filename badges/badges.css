@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+.badge {
+    display: inline-block;
+    padding: 0.4em 0.75em;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    color: white;
+    background-color: gray;
+}
+
+.badge.pill {
+    border-radius: 1rem;
+}
+
+.badge-primary { background-color: #007bff; }
+.badge-secondary { background-color: #6c757d; }
+.badge-success { background-color: #28a745; }
+.badge-danger { background-color: #dc3545; }
+.badge-warning { background-color: #ffc107; color: #212529; }
+.badge-info { background-color: #17a2b8; }
+.badge-light { background-color: #f8f9fa; color: #212529; }
+.badge-dark { background-color: #343a40; }
+
+
+
+*:has(>.notification-badge) {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    padding: 0.3em 0.6em;
+    font-size: 0.75em;
+    border-radius: 1rem;
+    background-color: red;
+    color: white;
+}
+
+.icon {
+    font-size: 2em;
+}

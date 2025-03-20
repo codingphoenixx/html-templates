@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loadingbar.css">
+    <link rel="stylesheet" href="../00_css/main.css">
+    <script src="loadingbar.js"></script>
+    
+</head>
+
+<body>
+    <div class="test loading-container">
+        <div class="test loading-bar" progress="0%"></div>
+        <div class="test progress-text">0%</div>
+    </div>
+    <div class="test2 loading-container" >
+        <div class="test2 loading-bar" progress="50%"></div>
+        <div class="test2 progress-text">50%</div>
+    </div>
+    <div class="test3 loading-container" >
+        <div class="test3 loading-bar" progress="50%"></div>
+        <div class="test3 progress-text">50%</div>
+    </div>
+
+    <script>
+        setTimeout(() => setProgress("test", 100), 1000);
+        setTimeout(() => setProgress("test2", 0), 1000);
+        setTimeout(() => setProgress("test3", 55), 1000);
+    </script>
+</body>
+
+</html>

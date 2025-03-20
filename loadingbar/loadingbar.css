@@ -1,0 +1,26 @@
+.loading-container {
+    position: relative;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.loading-bar {
+    width: var(--progress);
+    height: 20px;
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    transition: width 0.8s ease-out;
+}
+
+.progress-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    top: 0;
+    line-height: 20px;
+    color: black;
+}
