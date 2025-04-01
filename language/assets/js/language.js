@@ -2,7 +2,7 @@ async function loadTranslations(url) {
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`Fehler beim Laden: ${response.status}`);
-        
+
         const text = await response.text();
         const translations = parseProperties(text);
         applyTranslations(translations);
@@ -34,4 +34,17 @@ function applyTranslations(translations) {
     });
 }
 
-loadTranslations("./assets/translations/de-DE.properties");
+function changeLanguage(lang) {
+    document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll("iframe").forEach((iframe) => {
+        try {
+            if (iframe.contentDocument) {
+                iframe.contentWindow.changeLanguage(lang);
+            }
+        } catch (e) {
+            console.warn("Konnte Language nicht auf iFrame setzen:", e);
+        }
+    });
+    loadTranslations("./assets/translations/" + lang + ".properties");
+}
+changeLanguage("de-DE")
